@@ -20,9 +20,9 @@ disk_available=$(df -BM | grep -E "/dev/sda2" | awk '{print $4}' | xargs)
 timestamp=$(date '+%Y/%m/%d %H:%M:%S')
 # match hostname to host info table - satisfy foreign key constraint
 hostname=$(hostname -f)
-export host_id="(SELECT id FROM host_info WHERE host_info.hostname='$hostname')";
+export host_id="(SELECT id FROM host_info WHERE host_info.hostname='$hostname');"
 # insert the data into host_usage table (crontab job will automate this every minute)
-insert_stmt="INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES ('$timestamp','1', '$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '${disk_available::-1}')"
+insert_stmt="INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES ('$timestamp','2','$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '${disk_available::-1}')"
 export PGPASSWORD=$psql_password
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
 exit $?
