@@ -3,12 +3,14 @@ package ca.jrvs.apps.grep;
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.io.File;
 public class JavaGrepImp implements JavaGrep {
@@ -44,14 +46,14 @@ public class JavaGrepImp implements JavaGrep {
   @Override
   public List<File> listFiles(String rootDir) {
     //create filepath for file
-    File filesInDir = new File(rootPath);
+    File filesInDir = new File(rootDir);
     File[] pathList = filesInDir.listFiles();
     List<File> fileList = new ArrayList<>();
     assert pathList != null;
     for (File files : pathList) {
-      if (files.isDirectory()){
-        listFiles(files.getPath());}
-      else {
+      if (files.isDirectory()) {
+        listFiles(files.getPath());
+      } else {
         fileList.add(files);
       }
     }
@@ -61,8 +63,11 @@ public class JavaGrepImp implements JavaGrep {
   @Override
   public List<String> readLines(File inputFile)
       throws IOException {
+    if (!inputFile.isFile()){
+      throw new IllegalArgumentException("There's a non-file inputFile");
+    }
     BufferedReader br = new BufferedReader(new FileReader(inputFile));
-    List<String> lines = null;
+    List<String> lines = new ArrayList<>();
     while ((br.readLine()) != null){
       lines.add(br.readLine());
     }
@@ -74,25 +79,37 @@ public class JavaGrepImp implements JavaGrep {
     if (line.matches(regex)) {
       System.out.println(line);
       return true;
-    }
-    return false;
+    } else {
+    return false;}
   }
 
   @Override
   public void writeToFile(List<String> lines) throws IOException {
-    //logge
+    Writer writer = null;
 
+    try {
+      writer = new BufferedWriter(new OutputStreamWriter(
+          new FileOutputStream(outFile), StandardCharsets.UTF_8));
+      writer.write(String.valueOf(lines));
+    } catch (IOException ex) {
+      // Report
+    } finally {
+      try {writer.close();} catch (Exception ex) {/*ignore*/}
+    }
   }
+
 
   @Override
   public String getRootPath() {
     return rootPath;
   }
+
   @Override
   public File setRootPath(String rootPath) {
     this.rootPath = rootPath;
     return null;
   }
+
   @Override
   public String getOutFile() {
     return outFile;
@@ -107,7 +124,7 @@ public class JavaGrepImp implements JavaGrep {
     if (args.length != 3) {
       throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
     }
-    // BasicConfigurator is needed here .. why?
+
     JavaGrepImp javaGrepImp = new JavaGrepImp();
     javaGrepImp.setRegex(args[0]);
     javaGrepImp.setRootPath(args[1]);
@@ -115,7 +132,7 @@ public class JavaGrepImp implements JavaGrep {
     try {
       javaGrepImp.process();
     } catch (IOException e) {
-      e.printStackTrace();
+      javaGrepImp.logger.error("Error: Unable to process", e);
     }
   }
 }
