@@ -6,7 +6,6 @@ import java.io.*;
 public interface JavaGrep {
   /** Top level search workflow
    * @throws java.io.IOException
-   *
    */
   void process() throws IOException;
   /**
@@ -22,7 +21,7 @@ public interface JavaGrep {
    * @return lines
    * @throws IllegalArgumentException if a given inputFile is not a file
    */
-  List<String> readLines(File inputFile);
+  List<String> readLines(File inputFile) throws IOException;
   /**
    * check if a line contains the regex pattern (passed by user)
    * @param line input string
@@ -39,7 +38,7 @@ public interface JavaGrep {
 
   String getRootPath();
 
-  void setRootPath(String rootPath);
+  File setRootPath(String rootPath);
 
   String getRegex();
 
