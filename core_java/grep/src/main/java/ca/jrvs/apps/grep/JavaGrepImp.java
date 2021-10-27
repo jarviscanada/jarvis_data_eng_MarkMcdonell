@@ -4,6 +4,7 @@ import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -85,18 +86,13 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public void writeToFile(List<String> lines) throws IOException {
-    Writer writer = null;
-
-    try {
-      writer = new BufferedWriter(new OutputStreamWriter(
-          new FileOutputStream(outFile), StandardCharsets.UTF_8));
-      writer.write(String.valueOf(lines));
-    } catch (IOException ex) {
-      // Report
-    } finally {
-      try {writer.close();} catch (Exception ex) {/*ignore*/}
+    File matchedLinesFile = new File("/home/centos/dev/jarvis_data_eng_MarkMcdonell/core_java/grep/out/matchedLines.txt");
+    matchedLinesFile.createNewFile();
+    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+        new FileOutputStream("matchedLines.txt"), StandardCharsets.UTF_8));
+    writer.write(String.valueOf(lines));
+    writer.close();
     }
-  }
 
 
   @Override
