@@ -30,7 +30,7 @@ total_mem=$(echo "$meminfo" | grep -E "MemTotal:" | awk '{printf( "%d\n", $2 /10
 # time2=$(vmstat -t | awk '{print $19}')
 # timestamp=$($time1\s$time2)
 timestamp=$(date '+%Y/%m/%d %H:%M:%S') # easier solution
-host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
+export host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
 # insert statement to be used by PSQL
 insert_stmt="INSERT INTO host_info (id, hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, L2_cache, total_mem, timestamp) VALUES ( '2', '$hostname','$cpu_number', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '${L2_cache::-1}', '$total_mem', '$timestamp')"
 export PGPASSWORD=$psql_password
