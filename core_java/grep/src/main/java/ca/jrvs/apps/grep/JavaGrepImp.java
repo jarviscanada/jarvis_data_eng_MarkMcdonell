@@ -1,15 +1,14 @@
 package ca.jrvs.apps.grep;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.apache.log4j.BasicConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileDescriptor;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +45,6 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public List<File> listFiles(String rootDir) {
-    //create filepath for file
     File filesInDir = new File(rootDir);
     File[] pathList = filesInDir.listFiles();
     List<File> fileList = new ArrayList<>();
@@ -120,7 +118,7 @@ public class JavaGrepImp implements JavaGrep {
     if (args.length != 3) {
       throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile");
     }
-
+    BasicConfigurator.configure();
     JavaGrepImp javaGrepImp = new JavaGrepImp();
     javaGrepImp.setRegex(args[0]);
     javaGrepImp.setRootPath(args[1]);
