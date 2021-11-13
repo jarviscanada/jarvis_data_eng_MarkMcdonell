@@ -9,7 +9,7 @@ The app is used by calling from terminal:
 This will output the lines in any file under the root directory that contain a pattern matching the user-entered regex, and output the matched lines to a specified by outFile path.
 This app is also dockerized and can be run in a container built from the image found in the repository docker.io/markpmcd/grep
 
-#Implemenation
+# Implemenation
 ## Pseudocode
 > process (regex, rootPath, outFile)  
 > matchedLines = new ArrayList<>  
@@ -36,4 +36,3 @@ With this image created, a container was run with sample arguments. The
 1. Add all Streams instead of lists.
 2. Create a sharded database to take huge files (larger than machine capacity)
 3. Add exceptions for other errors.
->>>>>>> feature/java_grep
