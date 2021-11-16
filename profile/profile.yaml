@@ -1,0 +1,99 @@
+# Preferred name (Characters only)
+name: "Mark Mcdonell"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_MarkMcdonell
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: I graduated with a bachelor's degree in Mechanical Engineering from McMaster University. I worked professinally as a Sales Engineer, and then moved to Belgium to work at Toyota Motor Europe as a Project Consultant on a major automotive recall. As project consultant, I was exposed to data analysis, forecasting and reporting while managing the recall database. With my interest in data analysis piqued, I took several introductory courses to understand automation as well as data structures and algorithms. I joined Jarvis as a Data Engineer to deepen my computer science understanding and programming abilities through practical training projects. Throughout each project I collaborated with a team using Agile/Scrum methodology, sharing and iterating solutions. I am motivated to continuously learn new technologies and excel as a data engineer.
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+    - MS Excel
+    - MS Access
+  # At least 5 skills
+  competent:
+    - Java/Maven
+    - Linux/Bash
+    - Python
+    - Visio
+    - PostgreSQL
+  # At least 5 skills
+  familiar:
+    - HTML/CSS
+    - Machine Learning (scikit-learn)
+    - Jira
+    - PowerBI
+    - Docker
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Developed a monitoring system for Jarvis Linux Cluster Administration team. A Bash script was used to instantiate a Docker container for a PostgreSQL database, and relevant tables were created using SQL DDL. Implemented another Bash script that parses host system hardware specicifications and resource usage and inserts the data into the tables. The resource usage data is automated with crontab to populate a new row every one-minute. Designed SQL queries to answer business questions, such as the average resource usage in a 5-minutes interval for each host server. Utilized Git for version control and upload to GitHub according to GitFlow workflow standards."
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description:
+      - "JDBC App: Created a Java application that can read, write, update and delete (CRUD) data against an RDBMS."
+      - "Grep App: Developing a Java app that mimics the bash grep function using recursion to search for regex pattern in text files."
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: ""
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "Custom Mad lib app"
+    #URL is optional
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Created a custom word game using tkinter library, accepting user input and returning a 'story' using keywords"
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Data Engineer"
+    company: "Jarvis"
+    duration: "September 2021-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Worked with a team of Data Engineers to implement projects in Linux, SQL and Java using Agile/Scrum methodology. Conducted daily stand-up meetings for one sprint as team lead. Deepened understanding of data engineering through various video tutorials and articles, solidifying concepts during code reviews. "
+  - title: "Project Consultant"
+    company: "Toyota Motor Europe"
+    duration: "June 2018-May 2021"
+    description: "Consulted on major safety-related product recalls, supporting 30+ clients with technical and warranty-related issues as well as parts supply. Designed the workflow of a web application to reduce parts back-order and increase client satisfaction; discovered and gathered user requirements and obtained the requested budget. Worked on Scrum team as business owner to develop, test and launch a PowerBI application within the project budget and timeline; led client demonstrations, created training videos and followed up bugs with development team. Independently learned SQL scripts to manage large MS Access databases; provided clean and customized datasets to clients based on needs. Visualized data using PowerBI and MS Excel and regularly chaired monthly meetings to communicate performance data against KPIs for clients and management."
+
+#List of edcuation
+education: 
+  - school_name: "McMaster University"
+    duration: "2011-2016"
+    degree: "Bachelor of Engineering"
+    department: "Mechanical Engineering & Society"
+    # optional
+    awards_achievements: 
+      - "Engineering Capstone Project: Testing heat loss in an opposed-piston steam engine - Chosen to present at McMaster Manufacturing Forum (Grade: A)"
+
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #List here
+    bullets:
+      - "White belt, Lean Six Sigma (2018)"
+      - "Various certificates, LinkedIn Learning: Using Python with Excel, Using Python for Automation, Building a Recommendation System with Python Machine Learning, Data Structures and Algorithms with Python (2021)"
+      - "French Language Certified Level B1.2, CVO Semper Brussels Education Centre (2021)"
+
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Tutor, high school math and physics 2016-2018"
+      - "Tutor, undergraduate level statistics 2021"
+      - "Canadian Cancer Society Fundraiser - Toronto Marathon"
+      - "3D modeling using Solidworks - designing custom healthcare components"
