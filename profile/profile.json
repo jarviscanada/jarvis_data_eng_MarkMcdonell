@@ -1,0 +1,98 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Engineering Capstone Project: Testing heat loss in an opposed-piston steam engine - Chosen to present at McMaster Manufacturing Forum (Grade: A)"
+      ],
+      "degree": "Bachelor of Engineering",
+      "department": "Mechanical Engineering \u0026 Society",
+      "duration": "2011-2016",
+      "school_name": "McMaster University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_MarkMcdonell",
+  "highlighted_projects": [
+    {
+      "description": "Created a custom word game using tkinter library, accepting user input and returning a 'story' using keywords",
+      "name": "Custom Mad lib app"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Developed a monitoring system for Jarvis Linux Cluster Administration team. A Bash script was used to instantiate a Docker container for a PostgreSQL database, and relevant tables were created using SQL DDL. Implemented another Bash script that parses host system hardware specicifications and resource usage and inserts the data into the tables. The resource usage data is automated with crontab to populate a new row every one-minute. Designed SQL queries to answer business questions, such as the average resource usage in a 5-minutes interval for each host server. Utilized Git for version control and upload to GitHub according to GitFlow workflow standards.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": [
+        "JDBC App: Created a Java application that can read, write, update and delete (CRUD) data against an RDBMS.",
+        "Grep App: Developing a Java app that mimics the bash grep function using recursion to search for regex pattern in text files."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    }
+  ],
+  "name": "Mark Mcdonell",
+  "others": [
+    {
+      "bullets": [
+        "White belt, Lean Six Sigma (2018)",
+        "Various certificates, LinkedIn Learning: Using Python with Excel, Using Python for Automation, Building a Recommendation System with Python Machine Learning, Data Structures and Algorithms with Python (2021)",
+        "French Language Certified Level B1.2, CVO Semper Brussels Education Centre (2021)"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Tutor, high school math and physics 2016-2018",
+        "Tutor, undergraduate level statistics 2021",
+        "Canadian Cancer Society Fundraiser - Toronto Marathon",
+        "3D modeling using Solidworks - designing custom healthcare components"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Worked with a team of Data Engineers to implement projects in Linux, SQL and Java using Agile/Scrum methodology. Conducted daily stand-up meetings for one sprint as team lead. Deepened understanding of data engineering through various video tutorials and articles, solidifying concepts during code reviews. ",
+      "duration": "September 2021-present",
+      "title": "Data Engineer"
+    },
+    {
+      "company": "Toyota Motor Europe",
+      "description": "Consulted on major safety-related product recalls, supporting 30+ clients with technical and warranty-related issues as well as parts supply. Designed the workflow of a web application to reduce parts back-order and increase client satisfaction; discovered and gathered user requirements and obtained the requested budget. Worked on Scrum team as business owner to develop, test and launch a PowerBI application within the project budget and timeline; led client demonstrations, created training videos and followed up bugs with development team. Independently learned SQL scripts to manage large MS Access databases; provided clean and customized datasets to clients based on needs. Visualized data using PowerBI and MS Excel and regularly chaired monthly meetings to communicate performance data against KPIs for clients and management.",
+      "duration": "June 2018-May 2021",
+      "title": "Project Consultant"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Java/Maven",
+      "Linux/Bash",
+      "Python",
+      "Visio",
+      "PostgreSQL"
+    ],
+    "familiar": [
+      "HTML/CSS",
+      "Machine Learning (scikit-learn)",
+      "Jira",
+      "PowerBI",
+      "Docker"
+    ],
+    "proficient": [
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git",
+      "MS Excel",
+      "MS Access"
+    ]
+  },
+  "summary": "I graduated with a bachelor's degree in Mechanical Engineering from McMaster University. I worked professinally as a Sales Engineer, and then moved to Belgium to work at Toyota Motor Europe as a Project Consultant on a major automotive recall. As project consultant, I was exposed to data analysis, forecasting and reporting while managing the recall database. With my interest in data analysis piqued, I took several introductory courses to understand automation as well as data structures and algorithms. I joined Jarvis as a Data Engineer to deepen my computer science understanding and programming abilities through practical training projects. Throughout each project I collaborated with a team using Agile/Scrum methodology, sharing and iterating solutions. I am motivated to continuously learn new technologies and excel as a data engineer."
+}
