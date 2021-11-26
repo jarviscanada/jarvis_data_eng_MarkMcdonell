@@ -23,7 +23,7 @@ for line in files:
 
 
 ## Performance Issue
-If input file is very large (larger than default heap size), you will get OutOfMemoryException. The first step is to increase the minimum heap size using -Xmx(Megabyte requirement)b.
+If input file is very large (larger than default heap size), you will get OutOfMemoryException. The first step is to increase the minimum heap size using -Xmx(Megabyte requirement).
 # Test
 How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
 Testing was done using the practice project folder and running my methods individually on test files containing a few lines and a few words on each line. When an error occurred, debugger was used to pinpoint root cause.
