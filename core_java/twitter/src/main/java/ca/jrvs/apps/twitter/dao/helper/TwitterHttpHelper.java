@@ -78,14 +78,11 @@ public class TwitterHttpHelper implements HttpHelper {
   }
 
   public static void main(String[] args) throws URISyntaxException, IOException {
-    //String consumerKey = System.getenv("consumerKey");
-    //String consumerSecret = System.getenv("consumerSecret");
-    //String accessToken = System.getenv("accessToken");
-    //String tokenSecret = System.getenv("tokenSecret");
-    String consumerKey="33DyMExRsQHPSEocIlbm34VrJ";
-    String consumerSecret="55LzOlBu27aUeGtlsOwbGuTHCfm4VNKRhMwR8MJc4eKCmXWYVx";
-    String accessToken="1445405322873614338-BwJL53GIt6XUnTae2uyl6DeyEHricm";
-    String tokenSecret="h5UgbPXMYMysXPm0sF7iyJmIAkWrQ9g3oh4h7AasYjMoR";
+    String consumerKey = System.getenv("consumerKey");
+    String consumerSecret = System.getenv("consumerSecret");
+    String accessToken = System.getenv("accessToken");
+    String tokenSecret = System.getenv("tokenSecret");
+
     System.out.println(consumerKey + "|" + consumerSecret + "|" + accessToken + "|" + tokenSecret);
     HttpHelper httpHelper = new TwitterHttpHelper(consumerKey, consumerSecret, accessToken,
         tokenSecret);
