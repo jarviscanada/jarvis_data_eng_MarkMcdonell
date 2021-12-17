@@ -1,10 +1,10 @@
-package ca.jrvs.apps.twitter;
+package ca.jrvs.apps.twitter.dao;
 
-public interface CrdDao {
+public interface CrdDao<T, ID> {
 
   /**
    * Create an entity(Tweet) to the underlying storage
-   * @param entity entity that to be created
+   * @param entity entity to be created
    * @return created entity
    */
   T create(T entity);

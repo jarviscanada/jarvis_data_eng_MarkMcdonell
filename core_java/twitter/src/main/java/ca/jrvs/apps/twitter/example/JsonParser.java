@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.IOException;
 
-public class JSONParser {
+public class JsonParser {
   public static final String companyStr = "{\n"
       + "   \"symbol\":\"AAPL\",\n"
       + "   \"companyName\":\"Apple Inc.\",\n"
