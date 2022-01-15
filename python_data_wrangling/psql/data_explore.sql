@@ -1,4 +1,5 @@
 
+
 SELECT '1' as one;
 select * from retail limit 100;
 
@@ -34,6 +35,9 @@ sum(unit_price*quantity)
 FROM retail
 group by to_char(invoice_date, 'YYYYMM')
 order by to_char(invoice_date, 'YYYYMM');
+
+SELECT invoice_no, invoice_date FROM retail ;
+
 
 
 
